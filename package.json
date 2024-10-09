@@ -1,0 +1,25 @@
+{
+    "name": "s2i-booklify",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack server --mode=development",
+        "build": "webpack --mode=production",
+        "build:dev": "webpack --mode=development"
+    },
+    "keywords": [],
+    "author": "Edoardo Vicenzi <edoardo.vicenzi@dedagroup.it>",
+    "license": "ISC",
+    "repository": "https://github.com/edoardovicenzi/s2i-booklify.git",
+    "dependencies": {},
+    "devDependencies": {
+        "dotenv": "^16.4.5",
+        "dotenv-webpack": "^8.1.0",
+        "html-webpack-plugin": "^5.6.0",
+        "webpack": "^5.95.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.1.0",
+        "webpack-dotenv": "^0.0.3"
+    }
+}
