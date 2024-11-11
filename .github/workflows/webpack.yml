@@ -25,11 +25,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Build
-      env:
-        API_URL: ${{ secrets.API_URL }}
       run: |
+        touch .env
+        echo API_URL=${{ secrets.API_URL }} >> .env
         yarn
-        npx webpack --env API_URL=$API_URL
+        npx webpack
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
