@@ -26,7 +26,7 @@ jobs:
         
     - name: Handle Environment Variables
       env:
-        API_URL: ${{ variables.API_URL }}
+        API_URL: ${{ secrets.API_URL }}
       run: |
         echo $API_URL
         touch .env
