@@ -27,8 +27,7 @@ jobs:
     - name: Build
       run: |
         touch .env
-        echo API_URL=${{ secrets.API_URL }} >> .env
-        echo API_URL=${{ secrets.API_URL }}
+        echo API_URL=${{ variables.API_URL }} >> .env
         yarn
         npx webpack
         
