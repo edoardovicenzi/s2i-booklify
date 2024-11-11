@@ -23,11 +23,17 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-
+        
+    - name: Handle Environment Variables
+      env:
+        API_URL: ${{ variables.API_URL }}
+      run: |
+        echo $API_URL
+        touch .env
+        echo $API_URL >> .env
+    
     - name: Build
       run: |
-        touch .env
-        echo API_URL=${{ variables.API_URL }} >> .env
         yarn
         npx webpack
         
