@@ -31,7 +31,7 @@ jobs:
         API_URL: ${{ secrets.API_URL }}
         
     - name: Deploy
-      uses: edoardovicenzi/pages-build-deployment@1
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages # The folder the action should deploy.
         folder: dist
