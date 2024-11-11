@@ -6,7 +6,9 @@
     "scripts": {
         "dev": "webpack server --mode=development",
         "build": "webpack --mode=production",
-        "build:dev": "webpack --mode=development"
+        "build:dev": "webpack --mode=development",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "keywords": [],
     "author": "Edoardo Vicenzi <edoardo.vicenzi@dedagroup.it>",
@@ -17,6 +19,7 @@
         "css-loader": "^7.1.2",
         "dotenv": "^16.4.5",
         "dotenv-webpack": "^8.1.0",
+        "gh-pages": "^6.2.0",
         "html-webpack-plugin": "^5.6.0",
         "mini-css-extract-plugin": "^2.9.1",
         "style-loader": "^4.0.0",
@@ -24,5 +27,7 @@
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.1.0",
         "webpack-dotenv": "^0.0.3"
-    }
+    },
+    "type": "git",
+    "url": "git+https://github.com/edoardovicenzi/s2i-booklify.git"
 }
