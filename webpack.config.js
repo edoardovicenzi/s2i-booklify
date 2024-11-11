@@ -8,6 +8,9 @@ module.exports = {
         index: './src/app/index.js'
     },
     output: {
+        publicPath: process.env.NODE_ENV === 'production'
+            ? '/edoardovicenzi/'
+            : '/'
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
