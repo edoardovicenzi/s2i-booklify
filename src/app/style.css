@@ -1,0 +1,68 @@
+/* FONTS */
+
+@font-face{
+font-family:AnticSlab;
+src: url(../../assets/font/antic/AnticSlab-Regular.otf);
+font-weight: normal;
+}
+
+@font-face{
+font-family:AnticSlab;
+src: url(../../assets/font/antic/AnticSans-Regular.otf);
+font-weight: normal;
+}
+
+@font-face{
+font-family:AnticSlab;
+src: url(../../assets/font/antic/AnticDidone-Regular.otf);
+font-weight: normal;
+}
+
+
+
+
+/* Utility */
+:root{
+    --primary: #ed4264;
+    --secondary: #ffedbc;
+    --accent-color: #F58D8B;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.hidden{
+    display: none;
+}
+
+/* Main Styles */
+html {
+    height: 100%;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    padding: 2rem;
+    font-family: AnticSlab;
+}
+h1{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+#page{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+/* Media Queries */
+@media screen and (min-width: 749px){
+    #page{
+       max-width: 750px;
+    }
+}

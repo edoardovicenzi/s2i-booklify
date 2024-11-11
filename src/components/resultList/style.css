@@ -1,0 +1,64 @@
+.result-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.result-list-item{
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    user-select: none;
+    cursor: pointer;
+}
+.result-list-item-header{
+    font-size: .75rem;
+}
+
+.result-list-item-header-span-label{
+    text-transform: uppercase;
+}
+.result-list-item-header-span-content{
+
+}
+.result-list-item-header-span-content-others{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+.result-list-item-header-span-content-others:hover{
+    text-decoration: underline;
+}
+.result-list-item-header-span-content-hidden{
+    margin: 0 1rem 0 0;
+}
+.result-list-item-header-span-content a{
+    margin: 0 .5rem 0 0;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+.result-list-item-header-span-content a{
+}
+
+.result-list-item-header-span-content a:hover{
+    text-decoration: underline;
+}
+
+.result-list-item-body{
+    font-size: 1.5rem;
+}
+.result-list-item-body[data-type=desc]{
+    font-size: .9rem;
+    transition: height 1000ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.result-list-item-body-name{
+    
+}
+.result-list-item-body-content{
+}
