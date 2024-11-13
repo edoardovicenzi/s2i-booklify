@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'booklify-build'
-    }
-
-  }
+  agent any
   stages {
     stage('git init') {
       steps {
