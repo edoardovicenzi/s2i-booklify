@@ -7,5 +7,15 @@ pipeline {
         sh 'yarn'
       }
     }
+    stage('Bundle app') {
+      steps {
+        sh 'yarn run predeploy'
+      }
+    }
+    stage('Deploy to github pages') {
+      steps {
+        sh 'yarn run deploy'
+      }
+    }
   }
 }
