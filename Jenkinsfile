@@ -6,9 +6,21 @@ pipeline {
 
   }
   stages {
-    stage('ClearWorkspace') {
+    stage('git init') {
       steps {
-        echo 'Clean Done!'
+        sh 'git init'
+      }
+    }
+
+    stage('git pull') {
+      steps {
+        sh 'git pull https://github.com/edoardovicenzi/s2i-booklify'
+      }
+    }
+
+    stage('npm install') {
+      steps {
+        sh 'npm install'
       }
     }
 
