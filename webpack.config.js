@@ -4,14 +4,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
+const publicPath = isProduction ? '/s2i-booklify/' : '/';
+
 module.exports = {
     entry: {
         index: './src/app/index.js'
     },
     output: {
-        publicPath: process.env.NODE_ENV === 'production'
-            ? '/edoardovicenzi/'
-            : '/',
+        publicPath: publicPath,
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
@@ -29,7 +31,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ 
-            title: 'Applicazione Webpack',
+            title: 'Booklify',
             template: './src/app/index.html'
         }),
         new MiniCssExtractPlugin({
