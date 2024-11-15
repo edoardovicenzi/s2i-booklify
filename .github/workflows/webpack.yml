@@ -23,19 +23,15 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        
-    - name: Handle Environment Variables
+    
+    
+    - name: Build  
       env:
         API_URL: ${{ secrets.API_URL }}
       run: |
-        echo $API_URL
-        touch .env
-        echo $API_URL >> .env
-    
-    - name: Build
-      run: |
+        env
         yarn
-        npx webpack
+        npx webpack 
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
