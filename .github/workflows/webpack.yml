@@ -24,17 +24,19 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     
+    - name: Output environments
+      env:
+        API_URL: ${{ secrets.API_URL }}
+      run: env
     
+    - name: Install Dependecies
+      run: yarn
+
     - name: Build  
-      run: |
-        echo "|| PRINTING ENV AND SECRETS"
-        echo "API_URL is: ${{ secrets.API_URL }}"
-        echo "TESTTEST is: ${{ env.TESTTEST }}"
-        yarn
-        npx webpack 
+      env:
+        API_URL: ${{ secrets.API_URL }}
+      run: yarn run predeploy
+
         
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages # The folder the action should deploy.
-        folder: dist
+      run: yarn deploy

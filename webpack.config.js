@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -35,6 +36,9 @@ module.exports = {
             filename: './src/app/style.css'
         }),
         new Dotenv(),
+        new webpack.DefinePlugin({
+            'process.env.API_URL': JSON.stringify(process.env.API_URL),
+        }),
     ],
     devServer: {
         headers: {
