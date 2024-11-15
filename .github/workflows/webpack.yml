@@ -26,11 +26,10 @@ jobs:
     
     
     - name: Build  
-      env:
-        API_URL: ${{ secrets.API_URL }}
-        TESTTEST: ${{ env.TESTTEST }}
       run: |
-        env
+        echo "|| PRINTING ENV AND SECRETS"
+        echo "API_URL is: ${{ secrets.API_URL }}"
+        echo "TESTTEST is: ${{ env.TESTTEST }}"
         yarn
         npx webpack 
         
