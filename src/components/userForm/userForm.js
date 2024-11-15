@@ -21,10 +21,18 @@ class UserForm{
         this.userFormElement.setAttribute('id', this.id);
         this.userFormElement.classList.add('form');
 
-        this.userFormElement.appendChild(this.createUserSearchInput('book-subjects', 'book-subjects', 'Enter a book subject...'))
+        this.userFormElement.appendChild(this.createFormHeader('Wecome to booklify'));
+        this.userFormElement.appendChild(this.createUserSearchInput('book-subjects', 'book-subjects', 'Enter a book subject...'));
         //
         this.attachEventListener();
         return this.userFormElement;
+    }
+    createFormHeader(innerText){
+        const header = document.createElement('h1');
+
+        header.innerText = innerText.toString().toUpperCase();
+
+        return header
     }
     createUserSearchInput(inputId, inputName, inputPlaceholder){
         this.searchInputName = inputName;
