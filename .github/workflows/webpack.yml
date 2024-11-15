@@ -28,6 +28,7 @@ jobs:
     - name: Build  
       env:
         API_URL: ${{ secrets.API_URL }}
+        TESTTEST: ${{ env.TESTTEST }}
       run: |
         env
         yarn
