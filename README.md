@@ -1,7 +1,10 @@
 # s2i-booklify
-This is a small utility that pulls books from the openlibrary.org API.
+This is a small utility that pulls books from the openlibrary.org API. [Click here to try it now!](https://edoardovicenzi.github.io/s2i-booklify/)
+![image](https://github.com/user-attachments/assets/e4543e14-c231-4a50-aa61-8bdfd2bf1bdb)
 
-## What can it do
+## Getting Started
+To get started just [visit the website](https://edoardovicenzi.github.io/s2i-booklify/) and search for a subject of your choice!
+## Features
 - Search books by subject
     - See the authors
     - See the title
@@ -23,4 +26,3 @@ The stack:
 ## Future works
 - [ ] Search by Authors
 - [ ] More user settings
-
